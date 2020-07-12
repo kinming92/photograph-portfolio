@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    font-family: sans-serif;
+    color: white;
+    background-color: #DFAA99;
+}
+
+.flex-grid {
+    display: flex;
+}
+
+.sidebar {
+    height: auto;
+    flex: 1 5%;
+    border-right: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* sidebar */
+.lang {
+   padding: 5px;
+}
+.lang__nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.lang__item{
+    
+    margin: 5px;
+    padding: 5px;
+    writing-mode: vertical-lr;
+}
+
+.social-media-icon{
+   
+    padding: 5px;
+}
+.social-media-icon__nav{
+    list-style: none;
+}
+.social-media-icon__item{
+    padding: 5px;
+    margin: 5px;;
+}
+.fab {
+    color: white;
+}
+
+.lang li:hover,
+.lang li::after,
+.social-media-icon__item:hover,
+.social-media-icon__item:after {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+/*second-side-bar */
+.second-side-bar {
+    height: auto;
+    flex: 1 5%;
+    border-right: 1px solid white;
+}
+
+.carousel-button{
+    width: 100%;
+    border: none;  text-decoration: none;
+    background-color: inherit;
+}
+
+.slide__img{
+    padding: 10px;
+}
+
+/* navigation bar */
+.nav-content{
+  flex: 1 90%;
+}
+.navbar {
+    height: 7%;
+    border-bottom: 1px solid white;
+}
+
+.navbar__nav{
+    max-height: 7%;
+    width: 50%;
+    padding: 1px;
+    
+    list-style: none;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid black;     */
+}
+
+.nav__link{
+    text-decoration: none;
+    color: white;
+}
+    
+
+ .nav__link:hover, 
+ .nav__link:active {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+
+
+/* About */
+.about-box{
+    max-width: 70%;
+    max-height: fit-content;
+    border: 1px solid white;
+    margin: 2rem;
+}
+.about-box img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.about-box h3{
+    position: relative;
+    right: 5rem;
+    font-size: 5rem;
+}
+
+
+/* contact */
+.contact-box{
+    max-width: 70%;
+    max-height: fit-content;
+    border: 1px solid white;
+    margin: 2rem;
+    
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-color: white;
+    background-color: #DFAA99;
+}
+
+
+/* Home */
+.home-container{
+    background-color: transparent;
+    width: auto;
+    margin: 10px;
+    height: 90%;
+    background-image: linear-gradient(
+        rgba(26, 1, 1, 0.45), 
+        rgba(78, 6, 6, 0.45)
+      ),url(/image/metal-dock.jpg);
+    background-size: 100% 100%;
+}
+
+.home-container h3{
+    position: relative;
+    width: 50%;
+    top: 30%;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* works */
+.works-container{
+    border: 1px solid white;
+    margin: 2rem;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.works-container img{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
