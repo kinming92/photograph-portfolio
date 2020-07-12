@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/photograph-website/static/css/main.0b0c542c.chunk.css",
+    "main.js": "/photograph-website/static/js/main.0f139676.chunk.js",
+    "main.js.map": "/photograph-website/static/js/main.0f139676.chunk.js.map",
+    "runtime-main.js": "/photograph-website/static/js/runtime-main.059e8574.js",
+    "runtime-main.js.map": "/photograph-website/static/js/runtime-main.059e8574.js.map",
+    "static/css/2.6886caac.chunk.css": "/photograph-website/static/css/2.6886caac.chunk.css",
+    "static/js/2.d1fde6e8.chunk.js": "/photograph-website/static/js/2.d1fde6e8.chunk.js",
+    "static/js/2.d1fde6e8.chunk.js.map": "/photograph-website/static/js/2.d1fde6e8.chunk.js.map",
+    "index.html": "/photograph-website/index.html",
+    "precache-manifest.5c2e837582b98e218374af6bb82d03b1.js": "/photograph-website/precache-manifest.5c2e837582b98e218374af6bb82d03b1.js",
+    "service-worker.js": "/photograph-website/service-worker.js",
+    "static/css/2.6886caac.chunk.css.map": "/photograph-website/static/css/2.6886caac.chunk.css.map",
+    "static/css/main.0b0c542c.chunk.css.map": "/photograph-website/static/css/main.0b0c542c.chunk.css.map",
+    "static/js/2.d1fde6e8.chunk.js.LICENSE.txt": "/photograph-website/static/js/2.d1fde6e8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.059e8574.js",
+    "static/css/2.6886caac.chunk.css",
+    "static/js/2.d1fde6e8.chunk.js",
+    "static/css/main.0b0c542c.chunk.css",
+    "static/js/main.0f139676.chunk.js"
+  ]
+}
