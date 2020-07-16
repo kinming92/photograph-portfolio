@@ -7,6 +7,10 @@
 }
 
 .app {
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+    min-width: 100vw;
     font-family: sans-serif;
     color: white;
     background-color: #DFAA99;
@@ -18,7 +22,8 @@
 
 .sidebar {
     height: auto;
-    flex: 1 5%;
+    min-height: 100vh;
+    flex: 1 6%;
     border-right: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -28,7 +33,10 @@
 .lang {
    padding: 5px;
 }
+
 .lang__nav {
+    margin: initial;
+    padding: initial;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -39,19 +47,22 @@
     
     margin: 5px;
     padding: 5px;
-    writing-mode: vertical-lr;
+    /* writing-mode: vertical-lr; */
+    text-align: center;
 }
 
 .social-media-icon{
-   
     padding: 5px;
 }
 .social-media-icon__nav{
+    margin: initial;
+    padding: initial;
     list-style: none;
 }
 .social-media-icon__item{
+    text-align: center;
     padding: 5px;
-    margin: 5px;;
+    margin: 5px;
 }
 .fab {
     color: white;
@@ -63,15 +74,19 @@
 .social-media-icon__item:after {
     cursor: pointer;
     font-size: 2em;
+    transition: 0.3s;
 }
 
 /*second-side-bar */
 .second-side-bar {
-    height: auto;
-    flex: 1 5%;
+    min-height: 100vh;
+    flex: 1 6%;
     border-right: 1px solid white;
 }
 
+.carousel-container{
+
+}
 .carousel-button{
     width: 100%;
     border: none;  text-decoration: none;
@@ -83,11 +98,11 @@
 }
 
 /* navigation bar */
-.nav-content{
+.main-content{
   flex: 1 90%;
 }
 .navbar {
-    height: 7%;
+    height: 3em;
     border-bottom: 1px solid white;
 }
 
