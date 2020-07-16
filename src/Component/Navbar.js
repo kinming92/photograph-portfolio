@@ -7,16 +7,16 @@ class Navbar extends Component {
             <div className="navbar">
                 <ul className="navbar__nav">
                     <li className="nav__item">
-                        <Link className="nav__link" to={"/"}>Home</Link>
+                        <Link className="nav__link" to={"/photograph-portfolio"}>Home</Link>
                     </li>
                     <li className="nav__item">
-                        <Link className="nav__link" to={"/about"}>About</Link>
+                        <Link className="nav__link" to={"/photograph-portfolio/about"}>About</Link>
                     </li>
                     <li className="nav__item">
-                        <Link className="nav__link" to={"/works"}>Works</Link>
+                        <Link className="nav__link" to={"/photograph-portfolio/works"}>Works</Link>
                     </li>
                     <li className="nav__item">
-                        <Link className="nav__link" to={"/contact"}>Contact</Link>
+                        <Link className="nav__link" to={"/photograph-portfolio/contact"}>Contact</Link>
                     </li>
                 </ul>
    
