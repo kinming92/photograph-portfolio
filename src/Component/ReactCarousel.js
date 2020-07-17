@@ -60,34 +60,34 @@ class ReactCarousel extends React.Component {
         </ButtonBack>
         <Slider>
             <Slide index={0}>
-              <Image className="slide__img" src="/image/white-jellyfish.jpg" alt="none"/>
+              <Image className="slide__img" src="/photograph-portfolio/image/be-kind.jpg" alt="none"/>
             </Slide>
             <Slide index={1}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src={window.location.origin + '/image/blue-and-brown-glass-rectangles.jpg'} alt="none"/>
             </Slide>
             <Slide index={2}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/green-plant-on-brown-glass-vase.jpg" alt="none"/>
             </Slide>
             <Slide index={3}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/highway-covered-in-water.jpg" alt="none"/>
             </Slide>
             <Slide index={4}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/man-wearing-white-shirt-beside-woman.jpg" alt="none"/>
             </Slide>
             <Slide index={5}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/pexels.jpg" alt="none"/>
             </Slide>
             <Slide index={6}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/photo-of-man-leaning-on-wall.jpg" alt="none"/>
             </Slide>
             <Slide index={7}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/polaroid-photo-of-flowers.jpg" alt="none"/>
             </Slide>
             <Slide index={8}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/top-view-photo-of-women-with-face-art.jpg" alt="none"/>
             </Slide>
             <Slide index={9}>
-                <Image className="slide__img" src="https://via.placeholder.com/100x120" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/white-jellyfish.jpg" alt="none"/>
             </Slide>
         </Slider>
         <ButtonNext className="carousel-button">

@@ -146,10 +146,8 @@
     padding: 10px;
 }
 
-.about-box h3{
-    position: relative;
-    right: 5rem;
-    font-size: 5rem;
+.about-box b{
+  font-size: 3em;
 }
 
 
@@ -176,10 +174,11 @@
     width: auto;
     margin: 10px;
     height: 90%;
+    min-height: 90vh;
     background-image: linear-gradient(
         rgba(26, 1, 1, 0.45), 
         rgba(78, 6, 6, 0.45)
-      ),url(/image/metal-dock.jpg);
+      ),url(/photograph-portfolio/image/metal-dock.jpg);
     background-size: 100% 100%;
 }
 
@@ -195,6 +194,8 @@
 
 /* works */
 .works-container{
+
+
     border: 1px solid white;
     margin: 2rem;
     padding: 1rem;

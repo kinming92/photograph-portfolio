@@ -6,17 +6,17 @@ class About extends Component{
             <div className="about-box container border">
                 <div className="row">
                     <div className="col-lg-4">
-                        <img src="https://via.placeholder.com/150x150" alt="..." />
+                        <img src="/photograph-portfolio/image/highway-covered-in-water.jpg" alt="none" />
                     </div>
                     <div className="col-lg-4">
                         <div className="row">
                             <div className="col-sm-12">
-                                <img src="https://via.placeholder.com/150" alt="..." />
+                                <img src="/photograph-portfolio/image/apartments-architecture-balcony-black-and-white.jpg" alt="..." />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-sm-12">
-                                <img src="https://via.placeholder.com/150" alt="..." />
+                                <img src="/photograph-portfolio/image/a-pexels.jpg" alt="..." />
                             </div>
                         </div>
                     </div>
