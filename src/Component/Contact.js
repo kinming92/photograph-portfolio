@@ -8,10 +8,10 @@ class Contact extends Component{
     
     handleSubmit = (e) =>{
         e.preventDefault();
-        const post = {
-            email: e.target.elements.email.value,
-            message: e.target.elements.message.value
-        }
+        // const post = {
+        //     email: e.target.elements.email.value,
+        //     message: e.target.elements.message.value
+        // }
     }
     
     render(){
