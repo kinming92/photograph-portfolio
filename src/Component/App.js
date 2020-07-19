@@ -1,29 +1,55 @@
 import React, { Component } from 'react'
 import {Switch, Route} from 'react-router-dom'
 
-import Navbar from './En/Navbar'
 import Sidebar from './En/Sidebar'
 import SecondSideBar from './En/SecondSideBar'
-import About from './En/About'
-import Home from './En/Home'
-import Contact from './En/Contact'
 import Works from './En/Works'
 
+import NavbarEn from './En/Navbar'
+import HomeEn from './En/Home'
+import AboutEn from './En/About'
+import ContactEn from './En/Contact'
+
+import NavbarCh from './Ch/Navbar'
+import HomeCh from './Ch/Home'
+import AboutCh from './Ch/About'
+import ContactCh from './Ch/Contact'
 
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      lang: 'en'
+    }
+    this.handleLanguageSwitch = this.handleLanguageSwitch.bind(this)
+  }
+
+  handleLanguageSwitch(lang){
+    this.setState({lang: lang})
+    console.log(this.state.lang)
+  }
   render(){
+    const lang = this.state.lang;
+    let Navbar = {}
+    
+    if( lang === 'en' ){
+      Navbar = <NavbarEn />
+
+    } else{
+      Navbar = <NavbarCh />
+    }
     return (
       <div className="app">
           <div className="flex-grid" >
-            <Sidebar />
+            <Sidebar onLanguageClicked={this.handleLanguageSwitch}/>
             <SecondSideBar />
             <div className="main-content">
-              <Navbar />
+              {Navbar}
               <Switch>
-                <Route exact path='/photograph-portfolio' component={Home} />
-                <Route path='/photograph-portfolio/contact' component={Contact} />
-                <Route path='/photograph-portfolio/about' component={About} />
+                <Route exact path='/photograph-portfolio' component={lang === 'en' ? HomeEn : HomeCh} />
+                <Route path='/photograph-portfolio/contact' component={lang === 'en' ? ContactEn : ContactCh} />
+                <Route path='/photograph-portfolio/about' component={lang === 'en' ? AboutEn : AboutCh} />
                 <Route path='/photograph-portfolio/works' component={Works} />
                 
                 {/* use button / iframe */}
