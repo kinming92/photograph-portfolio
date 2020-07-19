@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import {Switch, Route} from 'react-router-dom'
 
-import Navbar from './Navbar'
-import Sidebar from './Sidebar'
-import SecondSideBar from './SecondSideBar'
-import About from './About'
-import Home from './Home'
-import Contact from './Contact'
-import Works from './Works'
+import Navbar from './En/Navbar'
+import Sidebar from './En/Sidebar'
+import SecondSideBar from './En/SecondSideBar'
+import About from './En/About'
+import Home from './En/Home'
+import Contact from './En/Contact'
+import Works from './En/Works'
 
 
 

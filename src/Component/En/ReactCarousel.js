@@ -63,28 +63,28 @@ class ReactCarousel extends React.Component {
               <Image className="slide__img" src="/photograph-portfolio/image/be-kind.jpg" alt="none"/>
             </Slide>
             <Slide index={1}>
-                <Image className="slide__img" src={window.location.origin + '/image/blue-and-brown-glass-rectangles.jpg'} alt="none"/>
+                <Image className="slide__img" src="https://images.pexels.com/photos/4843330/pexels-photo-4843330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="none"/>
             </Slide>
             <Slide index={2}>
-                <Image className="slide__img" src="/photograph-portfolio/image/green-plant-on-brown-glass-vase.jpg" alt="none"/>
+                <Image className="slide__img" src="/photograph-portfolio/image/green-plant-on-brown-glass-vase.jpg" alt="none"/> 
             </Slide>
             <Slide index={3}>
                 <Image className="slide__img" src="/photograph-portfolio/image/highway-covered-in-water.jpg" alt="none"/>
             </Slide>
             <Slide index={4}>
-                <Image className="slide__img" src="/photograph-portfolio/image/man-wearing-white-shirt-beside-woman.jpg" alt="none"/>
+                <Image className="slide__img" src="https://images.pexels.com/photos/4584968/pexels-photo-4584968.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="none"/>
             </Slide>
             <Slide index={5}>
-                <Image className="slide__img" src="/photograph-portfolio/image/pexels.jpg" alt="none"/>
+                <Image className="slide__img" src="https://images.pexels.com/photos/4816503/pexels-photo-4816503.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="none"/>
             </Slide>
             <Slide index={6}>
-                <Image className="slide__img" src="/photograph-portfolio/image/photo-of-man-leaning-on-wall.jpg" alt="none"/>
+                <Image className="slide__img" src="https://images.pexels.com/photos/3706642/pexels-photo-3706642.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="none"/>
             </Slide>
             <Slide index={7}>
                 <Image className="slide__img" src="/photograph-portfolio/image/polaroid-photo-of-flowers.jpg" alt="none"/>
             </Slide>
             <Slide index={8}>
-                <Image className="slide__img" src="/photograph-portfolio/image/top-view-photo-of-women-with-face-art.jpg" alt="none"/>
+                <Image className="slide__img" src="https://images.pexels.com/photos/3328240/pexels-photo-3328240.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="none"/>
             </Slide>
             <Slide index={9}>
                 <Image className="slide__img" src="/photograph-portfolio/image/white-jellyfish.jpg" alt="none"/>
