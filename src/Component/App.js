@@ -47,9 +47,9 @@ class App extends Component {
             <div className="main-content">
               {Navbar}
               <Switch>
-                <Route exact path='/photograph-portfolio' component={lang === 'en' ? HomeEn : HomeCh} />
-                <Route path='/photograph-portfolio/contact' component={lang === 'en' ? ContactEn : ContactCh} />
-                <Route path='/photograph-portfolio/about' component={lang === 'en' ? AboutEn : AboutCh} />
+                <Route exact path='/photograph-portfolio' component={ lang === 'en' ? HomeEn : HomeCh} />
+                <Route path='/photograph-portfolio/contact' render={ ({history}) => ( lang === 'en' ? <ContactEn /> : <ContactCh history={history} /> ) } />
+                <Route path='/photograph-portfolio/about' component={ lang === 'en' ? AboutEn : AboutCh} />
                 <Route path='/photograph-portfolio/works' component={Works} />
                 
                 {/* use button / iframe */}

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 
 class Contact extends Component{
     constructor(){
@@ -8,10 +9,14 @@ class Contact extends Component{
     
     handleSubmit = (e) =>{
         e.preventDefault();
-        // const post = {
-        //     email: e.target.elements.email.value,
-        //     message: e.target.elements.message.value
-        // }
+        const post = {
+            subject: e.target.elements.subject.value,
+            message: e.target.elements.message.value
+        }
+
+        const url = `mailto:acct@example.com?subject=${post.subject}&body=${encodeURIComponent(post.message)}`
+        window.location.href = url;
+        this.props.history.replace("/photograph-portfolio");
     }
     
     render(){
@@ -22,9 +27,13 @@ class Contact extends Component{
                         <h3 className="card-title">Contact Us</h3>
                         <p className="card-text">Feel free to leave us a message</p>
                         <form onSubmit={this.handleSubmit}>
-                            <div className="mb-3">
+                            {/* <div className="mb-3">
                                 <label htmlFor="email" className="form-label">Email</label>
                                 <input type="email" className="form-control" id="email" placeholder="name@example.com" name="email" />
+                            </div> */}
+                            <div className="mb-3">
+                                <label htmlFor="subject" className="form-label">Subject</label>
+                                <input className="form-control" id="subject" rows="3" name="subject" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="message" className="form-label">Message</label>
@@ -42,4 +51,4 @@ class Contact extends Component{
     }
 }
 
-export default Contact
+export default withRouter(Contact)
