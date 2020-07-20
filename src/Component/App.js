@@ -17,66 +17,26 @@ import ContactCh from './Ch/Contact'
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state = {
-      lang: 'en',
-      largeScreen: true,
-      showItems: 7
+      lang: 'en'
     }
     this.handleLanguageSwitch = this.handleLanguageSwitch.bind(this)
    
-  }
-
-  handleWindowResize = () => {
-    const width = Math.max(window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth);
-    const height = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-   
-    if (window) {
-      let showItems = 7
-      if(height < 650){
-        showItems = 8
-      }else if (height < 900){
-        showItems = 9
-      }else {
-        showItems = 10 //suppose to be max
-      }
-      this.setState({
-        showItems: showItems
-      })
-    }
-
-    
-    if( width < 900 ){
-      this.setState( {largeScreen: false})
-    }else{
-      this.setState({largeScreen: true})
-    }
-    console.log(this.state)
-  }
-  componentDidMount() {
-    if (window) {
-      window.addEventListener('resize', this.handleWindowResize.bind(this))
-    }
-  }
-
-  componentWillUnmount() {
-    if (window) {
-      window.removeEventListener('resize', this.handleWindowResize.bind(this))
-    }
   }
 
   handleLanguageSwitch(lang){
     this.setState({lang: lang})
   }
   render(){
-    const { lang, largeScreen, showItems } = this.state;
+    const { lang } = this.state;
     
     return (
       <div className="app">
           <div className="flex-grid" >
             <Sidebar onLanguageClicked={this.handleLanguageSwitch}/>
-            { largeScreen ? <SecondSideBar items={showItems}/> : null}
+            <SecondSideBar />
             <div className="main-content">
               { lang === 'en' ? <NavbarEn /> : <NavbarCh />}
               <Switch>

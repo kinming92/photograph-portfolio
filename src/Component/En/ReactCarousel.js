@@ -5,63 +5,64 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 class ReactCarousel extends React.Component {
   
   state = {
-    showItems: 5
+    showItems: 7
   }
-  // handleWindowResize = () => {
+  handleWindowResize = () => {
     // const width = Math.max(window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth);
-    // const height = Math.min( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    const height = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
     // console.log("width---->", width);
-    // console.log("height---->", height);
+    console.log("height---->", height);
 
-  //   if (window) {
-  //     let showItems = 5
-  //     // if (width < 760) {
-  //     //   showItems = 3
-  //     // } else if (width < 800) {
-  //     //   showItems = 4
-  //     // } else if (width < 1050) {
-  //     //   showItems = 5
-  //     // } else if (width < 1440) {
-  //     //   showItems = 6
-  //     // } else if (width < 1980) {
-  //     //   showItems = 7
-  //     // }
+    if (window) {
+      let showItems = 5
+      // if (width < 760) {
+      //   showItems = 3
+      // } else if (width < 800) {
+      //   showItems = 4
+      // } else if (width < 1050) {
+      //   showItems = 5
+      // } else if (width < 1440) {
+      //   showItems = 6
+      // } else if (width < 1980) {
+      //   showItems = 7
+      // }
 
-  //     if(height < 650){
-  //       showItems = 7
-  //     }else if (height < 900){
-  //       showItems = 9
-  //     }else {
-  //       showItems = 10 //suppose to be max
-  //     }
-  //     this.setState({
-  //       showItems: showItems
-  //     })
-  //   }
-  // }
+      if(height <= 500){
+        showItems = 6
+      }else if (height > 500 && height <= 900){
+        showItems = 7
+      }else if ( height > 900){
+        showItems = 9 //suppose to be max
+      }
+      this.setState({
+        showItems: showItems
+      })
+    }
+  }
 
-  // componentDidMount() {
-  //   if (window) {
-  //     window.addEventListener('resize', this.handleWindowResize.bind(this))
-  //     this.handleWindowResize()
-  //   }
-  // }
+  componentDidMount() {
+    if (window) {
+      window.addEventListener('resize', this.handleWindowResize.bind(this))
+      this.handleWindowResize()
+    }
+  }
 
-  // componentWillUnmount() {
-  //   if (window) {
-  //     window.removeEventListener('resize', this.handleWindowResize.bind(this))
-  //   }
-  // }
+  componentWillUnmount() {
+    if (window) {
+      window.removeEventListener('resize', this.handleWindowResize.bind(this))
+    }
+  }
 
   render() {
-    // const { showItems } = this.state
+    const { showItems } = this.state
+    console.log(showItems)
     return (
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={120}
         totalSlides={10}
         orientation={"vertical"}
-        visibleSlides={this.props.numItems}
+        visibleSlides={showItems}
         className="carousel-container"
       >
         <ButtonBack className="carousel-button">

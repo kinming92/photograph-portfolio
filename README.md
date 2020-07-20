@@ -73,3 +73,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ```
 <Route path='/photograph-portfolio/contact' render={ ({history}) => ( lang === 'en' ? <ContactEn /> : <ContactCh history={history} /> ) } />
 ```
+2. Problem when trying to learn how resize listener
+ - ReactCarousel.js resize only work when windows screen is resized
+ - when refresh is hit the function will only record the device height but not the scrollable height
