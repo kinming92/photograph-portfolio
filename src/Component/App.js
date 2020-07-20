@@ -20,32 +20,65 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      lang: 'en'
+      lang: 'en',
+      largeScreen: true,
+      showItems: 7
     }
     this.handleLanguageSwitch = this.handleLanguageSwitch.bind(this)
+   
+  }
+
+  handleWindowResize = () => {
+    const width = Math.max(window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth);
+    const height = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+   
+    if (window) {
+      let showItems = 7
+      if(height < 650){
+        showItems = 8
+      }else if (height < 900){
+        showItems = 9
+      }else {
+        showItems = 10 //suppose to be max
+      }
+      this.setState({
+        showItems: showItems
+      })
+    }
+
+    
+    if( width < 900 ){
+      this.setState( {largeScreen: false})
+    }else{
+      this.setState({largeScreen: true})
+    }
+    console.log(this.state)
+  }
+  componentDidMount() {
+    if (window) {
+      window.addEventListener('resize', this.handleWindowResize.bind(this))
+    }
+  }
+
+  componentWillUnmount() {
+    if (window) {
+      window.removeEventListener('resize', this.handleWindowResize.bind(this))
+    }
   }
 
   handleLanguageSwitch(lang){
     this.setState({lang: lang})
-    console.log(this.state.lang)
   }
   render(){
-    const lang = this.state.lang;
-    let Navbar = {}
+    const { lang, largeScreen, showItems } = this.state;
     
-    if( lang === 'en' ){
-      Navbar = <NavbarEn />
-
-    } else{
-      Navbar = <NavbarCh />
-    }
     return (
       <div className="app">
           <div className="flex-grid" >
             <Sidebar onLanguageClicked={this.handleLanguageSwitch}/>
-            <SecondSideBar />
+            { largeScreen ? <SecondSideBar items={showItems}/> : null}
             <div className="main-content">
-              {Navbar}
+              { lang === 'en' ? <NavbarEn /> : <NavbarCh />}
               <Switch>
                 <Route exact path='/photograph-portfolio' component={ lang === 'en' ? HomeEn : HomeCh } />
                 <Route path='/photograph-portfolio/contact' component={ lang === 'en' ? ContactEn : ContactCh } />

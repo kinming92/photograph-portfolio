@@ -3,56 +3,65 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from '
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 class ReactCarousel extends React.Component {
+  
   state = {
     showItems: 5
   }
-  handleWindowResize = () => {
-    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    // const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  // handleWindowResize = () => {
+    // const width = Math.max(window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth);
+    // const height = Math.min( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
     // console.log("width---->", width);
     // console.log("height---->", height);
-    // console.log("hello")
-    if (window) {
-      let showItems = 8
-      if (width < 760) {
-        showItems = 3
-      } else if (width < 800) {
-        showItems = 4
-      } else if (width < 1050) {
-        showItems = 5
-      } else if (width < 1440) {
-        showItems = 6
-      } else if (width < 1980) {
-        showItems = 7
-      }
-      this.setState({
-        showItems: showItems
-      })
-    }
-  }
 
-  componentDidMount() {
-    if (window) {
-      window.addEventListener('resize', this.handleWindowResize.bind(this))
-      this.handleWindowResize()
-    }
-  }
+  //   if (window) {
+  //     let showItems = 5
+  //     // if (width < 760) {
+  //     //   showItems = 3
+  //     // } else if (width < 800) {
+  //     //   showItems = 4
+  //     // } else if (width < 1050) {
+  //     //   showItems = 5
+  //     // } else if (width < 1440) {
+  //     //   showItems = 6
+  //     // } else if (width < 1980) {
+  //     //   showItems = 7
+  //     // }
 
-  componentWillUnmount() {
-    if (window) {
-      window.removeEventListener('resize', this.handleWindowResize.bind(this))
-    }
-  }
+  //     if(height < 650){
+  //       showItems = 7
+  //     }else if (height < 900){
+  //       showItems = 9
+  //     }else {
+  //       showItems = 10 //suppose to be max
+  //     }
+  //     this.setState({
+  //       showItems: showItems
+  //     })
+  //   }
+  // }
+
+  // componentDidMount() {
+  //   if (window) {
+  //     window.addEventListener('resize', this.handleWindowResize.bind(this))
+  //     this.handleWindowResize()
+  //   }
+  // }
+
+  // componentWillUnmount() {
+  //   if (window) {
+  //     window.removeEventListener('resize', this.handleWindowResize.bind(this))
+  //   }
+  // }
 
   render() {
-    const { showItems } = this.state
+    // const { showItems } = this.state
     return (
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={120}
         totalSlides={10}
         orientation={"vertical"}
-        visibleSlides={showItems}
+        visibleSlides={this.props.numItems}
         className="carousel-container"
       >
         <ButtonBack className="carousel-button">

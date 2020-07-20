@@ -5,7 +5,7 @@ class SecondSideBar extends Component {
     render(){
         return (
             <div className="second-side-bar">
-                <ReactCarousel />
+                <ReactCarousel numItems={this.props.items}/>
             </div>
         );
     }
