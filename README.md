@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+#### Notes
+1. Instead of withRouter, and route component, I can pass history as prop as the following on app.js
+
+```
+<Route path='/photograph-portfolio/contact' render={ ({history}) => ( lang === 'en' ? <ContactEn /> : <ContactCh history={history} /> ) } />
+```
