@@ -11,7 +11,7 @@ class ReactCarousel extends React.Component {
     // const width = Math.max(window.innerWidth, document.documentElement.clientWidth, document.body.clientWidth);
     const height = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
     // console.log("width---->", width);
-    console.log("height---->", height);
+    // console.log("height---->", height);
 
     if (window) {
       let showItems = 5

@@ -10,9 +10,9 @@ class Sidebar extends Component {
     swithchLangHandler(e){
         const lang = e.target.firstChild.data
         this.props.onLanguageClicked(lang)
-        console.log(lang)
-        console.log(e.target.dataset.id)
-        console.log(e.currentTarget.dataset.id)
+        // console.log(lang)
+        // console.log(e.target.dataset.id)
+        // console.log(e.currentTarget.dataset.id)
     }
     render(){
         return (
